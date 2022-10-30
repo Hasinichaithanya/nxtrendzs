@@ -12,14 +12,18 @@
   }
 }
 
+.logo {
+  color: red;
+  font-family: 'lobster';
+  font-style: italic;
+  font-size: 50px;
+}
 .nav-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 90%;
   max-width: 1110px;
-  padding-top: 25px;
-  padding-bottom: 25px;
 }
 @media screen and (max-width: 768px) {
   .nav-content {
@@ -115,7 +119,9 @@
   text-decoration: none;
   color: #475569;
 }
-
+.link-item {
+  padding: 10px;
+}
 .nav-menu-item-mobile {
   margin: 0px;
   cursor: pointer;
@@ -162,4 +168,9 @@
 
 .nav-bar-image {
   width: 24px;
+}
+.link-item-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

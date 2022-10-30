@@ -4,7 +4,6 @@
   justify-content: center;
   align-items: center;
   margin: auto;
-  padding-top: 10px;
   padding-bottom: 50px;
   width: 90%;
   max-width: 1110px;
@@ -14,7 +13,6 @@
   .home-container {
     flex-direction: row;
     justify-content: space-between;
-    padding-top: 96px;
   }
 }
 

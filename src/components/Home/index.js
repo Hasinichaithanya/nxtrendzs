@@ -1,48 +1,39 @@
-import Cookies from 'js-cookie'
-import {Redirect, Link} from 'react-router-dom'
-
+import {Component} from 'react'
+import FooterSection from '../FooterSection'
 import Header from '../Header'
 
 import './index.css'
 
-const Home = () => {
-  const jwtToken = Cookies.get('jwt_token')
-  if (jwtToken === undefined) {
-    return <Redirect to="/login" />
-  }
-
-  return (
-    <>
-      <Header />
-      <div className="home-container">
-        <div className="home-content">
-          <h1 className="home-heading">Clothes That Get YOU Noticed</h1>
+class Home extends Component {
+  render() {
+    return (
+      <>
+        <Header />
+        <div className="home-container">
+          <div className="home-content">
+            <h1 className="home-heading">Select your Partner </h1>
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7NhNqoo_LcWy66EDcCQnJcw0kzHlpmTmBmg&usqp=CAU"
+              alt="home-img"
+              className="home-mobile-img"
+            />
+            <p className="home-description">
+              Select your partner, with your liked qualities and caste and job.
+              <br />
+              This site may help you find your liked ones, hope you get settled
+              with this site!!!
+            </p>
+          </div>
           <img
-            src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-home-img.png"
-            alt="clothes that get you noticed"
-            className="home-mobile-img"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7NhNqoo_LcWy66EDcCQnJcw0kzHlpmTmBmg&usqp=CAU"
+            alt="home-img"
+            className="home-desktop-img"
           />
-          <p className="home-description">
-            Fashion is part of the daily air and it does not quite help that it
-            changes all the time. Clothes have always been a marker of the era
-            and we are in a revolution. Your fashion makes you been seen and
-            heard that way you are. So, celebrate the seasons new and exciting
-            fashion in your own way.
-          </p>
-          <Link to="/products">
-            <button type="button" className="shop-now-button">
-              Shop Now
-            </button>
-          </Link>
         </div>
-        <img
-          src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-home-img.png"
-          alt="clothes that get you noticed"
-          className="home-desktop-img"
-        />
-      </div>
-    </>
-  )
+        <FooterSection />
+      </>
+    )
+  }
 }
 
 export default Home
